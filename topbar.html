@@ -1,0 +1,17 @@
+<!-- components/topbar.html -->
+<div class="md:ml-64 w-full h-16 bg-white shadow flex items-center justify-between px-6 fixed top-0 z-10">
+  <div class="md:hidden block text-primary">
+    <!-- Hamburger for mobile toggle -->
+    <button onclick="toggleSidebar()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="flex items-center gap-4">
+    <span class="text-gray-600">Hi, Admin 👋</span>
+    <button class="text-accent hover:underline">Logout</button>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPRAM | Doctor Appointments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- ✅ Topbar -->
+  <div class="h-16 w-full fixed bg-white shadow flex items-center justify-between px-6 z-10">
+    <h1 class="text-xl font-bold text-blue-900">My Appointments</h1>
+    <a href="doctor-dashboard.html" class="text-blue-600 hover:underline">← Back to Dashboard</a>
+  </div>
+
+  <!-- ✅ Appointment Table -->
+  <main class="mt-20 max-w-5xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-6 text-center text-blue-800">Today's Appointment Schedule</h2>
+
+    <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+      <table class="min-w-full text-sm text-left text-gray-700">
+        <thead class="bg-blue-800 text-white">
+          <tr>
+            <th class="py-3 px-6">#</th>
+            <th class="py-3 px-6">Patient Name</th>
+            <th class="py-3 px-6">Time</th>
+            <th class="py-3 px-6">Date</th>
+            <th class="py-3 px-6">Symptoms</th>
+            <th class="py-3 px-6">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b hover:bg-blue-50 transition">
+            <td class="py-3 px-6">1</td>
+            <td class="py-3 px-6">Kamaldeen Mohammed</td>
+            <td class="py-3 px-6">10:00 AM</td>
+            <td class="py-3 px-6">2025-06-19</td>
+            <td class="py-3 px-6">Headache, Fever</td>
+            <td class="py-3 px-6 text-green-600 font-semibold">Upcoming</td>
+          </tr>
+          <tr class="border-b hover:bg-blue-50 transition">
+            <td class="py-3 px-6">2</td>
+            <td class="py-3 px-6">Keerah Olalekan</td>
+            <td class="py-3 px-6">11:30 AM</td>
+            <td class="py-3 px-6">2025-06-19</td>
+            <td class="py-3 px-6">Cough, Fatigue</td>
+            <td class="py-3 px-6 text-yellow-500 font-semibold">Pending</td>
+          </tr>
+          <tr class="hover:bg-blue-50 transition">
+            <td class="py-3 px-6">3</td>
+            <td class="py-3 px-6">Fatima Umar</td>
+            <td class="py-3 px-6">1:00 PM</td>
+            <td class="py-3 px-6">2025-06-19</td>
+            <td class="py-3 px-6">Back pain</td>
+            <td class="py-3 px-6 text-gray-500 font-semibold">Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

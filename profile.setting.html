@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPRAM | Profile Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-gray-100">
+
+  <!-- ✅ Header -->
+  <div class="h-16 w-full fixed bg-white shadow flex items-center justify-between px-6 z-10">
+    <h1 class="text-xl font-bold text-blue-900">Profile Settings</h1>
+    <a href="patient-dashboard.html" class="text-blue-600 hover:underline">← Back</a>
+  </div>
+
+  <!-- ✅ Main Content -->
+  <main class="mt-20 max-w-3xl mx-auto p-6 bg-white shadow rounded-lg">
+    <form class="space-y-6">
+      <!-- Profile Picture -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Profile Picture</label>
+        <div class="flex items-center gap-4">
+          <img src="https://via.placeholder.com/80" alt="Profile Picture" class="w-20 h-20 rounded-full object-cover border" />
+          <input type="file" class="text-sm text-gray-600" />
+        </div>
+      </div>
+
+      <!-- Full Name -->
+      <div>
+        <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter full name"
+               class="mt-1 block w-full border rounded-md shadow-sm px-4 py-2 focus:ring focus:outline-none" />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter email address"
+               class="mt-1 block w-full border rounded-md shadow-sm px-4 py-2 focus:ring focus:outline-none" />
+      </div>
+
+      <!-- DOB -->
+      <div class="mt-4">
+          <input type="date" class="w-full px-4 py-2 border rounded focus:ring-accent focus:outline-none"/>
+        </div>
+
+      <!-- Phone -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number"
+               class="mt-1 block w-full border rounded-md shadow-sm px-4 py-2 focus:ring focus:outline-none" />
+      </div>
+
+      <!-- Password Change -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Change Password</label>
+        <div class="grid gap-4 mt-2">
+          <input type="password" placeholder="Current Password"
+                 class="w-full border rounded-md px-4 py-2" />
+          <input type="password" placeholder="New Password"
+                 class="w-full border rounded-md px-4 py-2" />
+          <input type="password" placeholder="Confirm New Password"
+                 class="w-full border rounded-md px-4 py-2" />
+        </div>
+      </div>
+
+      <!-- Save Button -->
+      <div class="pt-4">
+        <button type="submit"
+                class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg shadow">
+          Save Changes
+        </button>
+      </div>
+    </form>
+  </main>
+
+</body>
+</html>

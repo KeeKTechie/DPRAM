@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DPRAM | Add/Edit User</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Topbar -->
+  <header class="h-16 w-full fixed bg-white shadow flex items-center justify-between px-6 z-10">
+    <h1 class="text-xl font-bold text-blue-800">Add / Edit Doctor or Patient</h1>
+    <a href="admin-dashboard.html" class="text-blue-600 hover:underline">← Back</a>
+  </header>
+
+  <!-- Form -->
+  <main class="mt-20 max-w-3xl mx-auto bg-white p-8 rounded-lg shadow">
+    <form class="space-y-6">
+      <!-- Role -->
+      <div>
+        <label for="role" class="block text-sm font-medium text-gray-700">User Role</label>
+        <select id="role" name="role" class="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring">
+          <option value="doctor">Doctor</option>
+          <option value="patient">Patient</option>
+        </select>
+      </div>
+
+      <!-- Full Name -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Full Name"
+               class="mt-1 w-full border rounded-md px-4 py-2" />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Email"
+               class="mt-1 w-full border rounded-md px-4 py-2" />
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone"
+               class="mt-1 w-full border rounded-md px-4 py-2" />
+      </div>
+
+      <!-- Specialty or Age -->
+      <div id="extraField">
+        <!-- this will change via JavaScript -->
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" id="password" name="password" placeholder="Set a password"
+               class="mt-1 w-full border rounded-md px-4 py-2" />
+      </div>
+
+      <!-- Submit -->
+      <div>
+        <button type="submit"
+                class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-md">
+          Save User
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    // Dynamically change input field based on role
+    const roleSelect = document.getElementById('role');
+    const extraField = document.getElementById('extraField');
+
+    function updateExtraField() {
+      const role = roleSelect.value;
+      if (role === 'doctor') {
+        extraField.innerHTML = `
+          <label for="specialty" class="block text-sm font-medium text-gray-700">Specialty</label>
+          <input type="text" id="specialty" name="specialty" placeholder="e.g. Cardiologist"
+                 class="mt-1 w-full border rounded-md px-4 py-2" />
+        `;
+      } else {
+        extraField.innerHTML = `
+          <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+          <input type="number" id="age" name="age" placeholder="e.g. 32"
+                 class="mt-1 w-full border rounded-md px-4 py-2" />
+        `;
+      }
+    }
+
+    roleSelect.addEventListener('change', updateExtraField);
+    window.addEventListener('DOMContentLoaded', updateExtraField);
+  </script>
+</body>
+</html>

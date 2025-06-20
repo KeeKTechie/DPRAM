@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DPRAM | Digital Patient Record & Appointment Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e293b',
+            accent: '#3b82f6',
+            soft: '#f8fafc'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-soft text-primary font-sans">
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-200">
+    <div class="max-w-4xl px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">DPRAM</h1>
+      <p class="text-lg md:text-xl mb-6">Digital Patient Record & Appointment Manager</p>
+      <p class="text-gray-700 mb-8">Manage patient records, appointments, and consultations in one smart dashboard.</p>
+      <a href="login.html" class="bg-accent text-white py-3 px-6 rounded-lg shadow hover:bg-blue-600 transition">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">🔍 Why DPRAM?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-soft p-6 rounded shadow text-center">
+          <h3 class="text-xl font-semibold mb-2">📁 Centralized Records</h3>
+          <p class="text-gray-600">All patient histories, prescriptions, and reports stored in one secure space.</p>
+        </div>
+        <div class="bg-soft p-6 rounded shadow text-center">
+          <h3 class="text-xl font-semibold mb-2">📅 Easy Appointments</h3>
+          <p class="text-gray-600">Patients book, doctors manage, and everyone stays on schedule.</p>
+        </div>
+        <div class="bg-soft p-6 rounded shadow text-center">
+          <h3 class="text-xl font-semibold mb-2">🔐 Role-Based Access</h3>
+          <p class="text-gray-600">Separate dashboards for Admin, Doctor, and Patient. All smart, all secure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-6 mt-16">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center flex-col md:flex-row text-center">
+      <p>&copy; 2025 DPRAM. All rights reserved.</p>
+      <p class="mt-4 md:mt-0">Made with 💙 by KeeKTechie</p>
+    </div>
+  </footer>
+
+</body>
+</html>

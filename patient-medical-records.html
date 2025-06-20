@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPRAM | My Medical Records</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- ✅ Topbar -->
+  <div class="h-16 w-full fixed bg-white shadow flex items-center justify-between px-6 z-10">
+    <h1 class="text-xl font-bold text-blue-900">My Medical Records</h1>
+    <a href="patient-dashboard.html" class="text-blue-600 hover:underline">← Back to Dashboard</a>
+  </div>
+
+  <!-- ✅ Medical Records Table -->
+  <main class="mt-20 max-w-6xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-6 text-center text-blue-800">Health History Overview</h2>
+
+    <div class="overflow-x-auto bg-white shadow rounded-lg">
+      <table class="min-w-full text-sm text-left text-gray-700">
+        <thead class="bg-blue-800 text-white">
+          <tr>
+            <th class="py-3 px-6">#</th>
+            <th class="py-3 px-6">Date</th>
+            <th class="py-3 px-6">Doctor</th>
+            <th class="py-3 px-6">Diagnosis</th>
+            <th class="py-3 px-6">Prescription</th>
+            <th class="py-3 px-6">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b hover:bg-blue-50 transition">
+            <td class="py-3 px-6">1</td>
+            <td class="py-3 px-6">2025-06-10</td>
+            <td class="py-3 px-6">Dr. Keerah Olalekan</td>
+            <td class="py-3 px-6">Malaria</td>
+            <td class="py-3 px-6">Lonart DS, Paracetamol</td>
+            <td class="py-3 px-6">Drink plenty of water, rest well.</td>
+          </tr>
+          <tr class="border-b hover:bg-blue-50 transition">
+            <td class="py-3 px-6">2</td>
+            <td class="py-3 px-6">2025-05-05</td>
+            <td class="py-3 px-6">Dr. Musa Adamu</td>
+            <td class="py-3 px-6">Typhoid</td>
+            <td class="py-3 px-6">Ciprofloxacin, ORS</td>
+            <td class="py-3 px-6">Avoid oily food and maintain hygiene.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
